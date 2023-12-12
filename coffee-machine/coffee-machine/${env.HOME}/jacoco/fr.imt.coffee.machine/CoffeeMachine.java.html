@@ -59,12 +59,12 @@ public class CoffeeMachine {
      * @param waterVolume Volume d'eau en litres à ajouter
      */
     public void addWaterInTank(double waterVolume){
-<span class="nc" id="L62">        this.waterTank.increaseVolumeInTank(waterVolume);</span>
-<span class="nc" id="L63">    }</span>
+<span class="fc" id="L62">        this.waterTank.increaseVolumeInTank(waterVolume);</span>
+<span class="fc" id="L63">    }</span>
 
     public void addCoffeeInBeanTank(double coffeeVolume, CoffeeType coffeeType){
-<span class="nc" id="L66">        beanTank.increaseCoffeeVolumeInTank(coffeeVolume, coffeeType);</span>
-<span class="nc" id="L67">    }</span>
+<span class="fc" id="L66">        beanTank.increaseCoffeeVolumeInTank(coffeeVolume, coffeeType);</span>
+<span class="fc" id="L67">    }</span>
 
     /**
      * Permet de faire couler un café à partir d'un contenant et d'un type de café
@@ -91,23 +91,23 @@ public class CoffeeMachine {
 <span class="nc" id="L91">            throw new LackOfWaterInTankException(&quot;You must add more water in the water tank.&quot;);</span>
         }
 
-<span class="pc bpc" id="L94" title="1 of 2 branches missed.">        if (!container.isEmpty()){</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        if (!container.isEmpty()){</span>
 <span class="fc" id="L95">            throw new CupNotEmptyException(&quot;Empty your cup.&quot;);</span>
         }
 
-<span class="nc bnc" id="L98" title="All 2 branches missed.">        if(coffeeType != this.beanTank.getBeanCoffeeType()){</span>
-<span class="nc" id="L99">            throw new CoffeeTypeCupDifferentOfCoffeeTypeTankException(&quot;The type of coffee to be made in the cup is different from that in the tank.&quot;);</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if(coffeeType != this.beanTank.getBeanCoffeeType()){</span>
+<span class="fc" id="L99">            throw new CoffeeTypeCupDifferentOfCoffeeTypeTankException(&quot;The type of coffee to be made in the cup is different from that in the tank.&quot;);</span>
         }
 
-<span class="nc" id="L102">        coffeeMachineFailure();</span>
+<span class="fc" id="L102">        coffeeMachineFailure();</span>
 
-<span class="nc bnc" id="L104" title="All 2 branches missed.">        if(isOutOfOrder){</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">        if(isOutOfOrder){</span>
 <span class="nc" id="L105">            logger.warn(&quot;The machine is out of order. Please reset the coffee machine&quot;);</span>
 <span class="nc" id="L106">            return null;</span>
         }
 
-<span class="nc bnc" id="L109" title="All 2 branches missed.">        if(coffeeType.toString().contains(&quot;_CREMA&quot;)){</span>
-<span class="nc" id="L110">            throw new CannotMakeCremaWithSimpleCoffeeMachine(&quot;You cannot make an espresso with a CoffeeMachine, please use EspressoCoffeeMachine&quot;);</span>
+<span class="pc bpc" id="L109" title="1 of 2 branches missed.">        if(coffeeType.toString().contains(&quot;_CREMA&quot;)){</span>
+<span class="fc" id="L110">            throw new CannotMakeCremaWithSimpleCoffeeMachine(&quot;You cannot make an espresso with a CoffeeMachine, please use EspressoCoffeeMachine&quot;);</span>
         }
 
 <span class="nc" id="L113">        electricalResistance.waterHeating(container.getCapacity());</span>
@@ -145,7 +145,7 @@ public class CoffeeMachine {
     }
 
     public WaterTank getWaterTank() {
-<span class="nc" id="L148">        return waterTank;</span>
+<span class="fc" id="L148">        return waterTank;</span>
     }
 
     public WaterPump getWaterPump() {

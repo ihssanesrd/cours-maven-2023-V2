@@ -1,5 +1,7 @@
 package fr.imt.coffee.machine;
 
+import fr.imt.coffee.machine.exception.CannotMakeCremaWithSimpleCoffeeMachine;
+import fr.imt.coffee.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
 import fr.imt.storage.cupboard.coffee.type.CoffeeType;
 import fr.imt.storage.cupboard.container.Cup;
 import fr.imt.storage.cupboard.exception.CupNotEmptyException;
@@ -119,6 +121,38 @@ public class CoffeeMachineUnitTest {
         Assertions.assertThrows(CupNotEmptyException.class, ()->{
                 coffeeMachineUnderTest.makeACoffee(mockCup, CoffeeType.MOKA);
             });
+    }
+
+    @Test
+    void testSameCoffeeType() {
+        Cup cup=new Cup(1);
+
+        coffeeMachineUnderTest.plugToElectricalPlug();
+
+        coffeeMachineUnderTest.addWaterInTank(5);
+
+        coffeeMachineUnderTest.addCoffeeInBeanTank(5,CoffeeType.ARABICA_CREMA);
+
+        Assertions.assertThrows(CoffeeTypeCupDifferentOfCoffeeTypeTankException.class,()->{
+            coffeeMachineUnderTest.makeACoffee(cup,CoffeeType.ROBUSTA);
+        });
+
+    }
+
+    @Test
+    void testCannotMakeCremaWithSimpleCoffeeMachine() {
+        Cup cup=new Cup(1);
+
+        coffeeMachineUnderTest.plugToElectricalPlug();
+
+        coffeeMachineUnderTest.addWaterInTank(5);
+
+        coffeeMachineUnderTest.addCoffeeInBeanTank(5,CoffeeType.ARABICA_CREMA);
+
+        Assertions.assertThrows(CannotMakeCremaWithSimpleCoffeeMachine.class,()->{
+            coffeeMachineUnderTest.makeACoffee(cup,CoffeeType.ARABICA_CREMA);
+        });
+
     }
 
     @AfterEach

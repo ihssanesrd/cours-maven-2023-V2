@@ -16,10 +16,10 @@ public class EspressoCoffeeMachine extends CoffeeMachine{
     public EspressoCoffeeMachine(double minCoffeeBeanTank, double maxCoffeeBeanTank,
                                  double minWaterTank, double maxWaterTank,
                                  double pumpingCapacity) {
-<span class="nc" id="L19">        super(minCoffeeBeanTank, maxCoffeeBeanTank, minWaterTank, maxWaterTank, pumpingCapacity);</span>
-<span class="nc" id="L20">        this.secondaryBeanTank = new BeanTank(0, minCoffeeBeanTank, maxCoffeeBeanTank, null);</span>
-<span class="nc" id="L21">        this.steamPipe = new SteamPipe();</span>
-<span class="nc" id="L22">    }</span>
+<span class="fc" id="L19">        super(minCoffeeBeanTank, maxCoffeeBeanTank, minWaterTank, maxWaterTank, pumpingCapacity);</span>
+<span class="fc" id="L20">        this.secondaryBeanTank = new BeanTank(0, minCoffeeBeanTank, maxCoffeeBeanTank, null);</span>
+<span class="fc" id="L21">        this.steamPipe = new SteamPipe();</span>
+<span class="fc" id="L22">    }</span>
 
     /**
      * Permet de faire couler un café à partir d'un contenant et d'un type de café
@@ -37,20 +37,20 @@ public class EspressoCoffeeMachine extends CoffeeMachine{
      * @throws CoffeeTypeCupDifferentOfCoffeeTypeTankException Exception levée lorsque le café souhaité est différent de celui chargé dans le réservoir de la cafetière
      */
     public CoffeeContainer makeACoffee(Container container, CoffeeType coffeeType) throws LackOfWaterInTankException, InterruptedException, MachineNotPluggedException, CupNotEmptyException, CoffeeTypeCupDifferentOfCoffeeTypeTankException {
-<span class="nc bnc" id="L40" title="All 2 branches missed.">        if(!isPlugged()){</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if(!isPlugged()){</span>
 <span class="nc" id="L41">            throw new LackOfWaterInTankException(&quot;You must plug your coffee machine&quot;);</span>
         }
 
-<span class="nc bnc" id="L44" title="All 2 branches missed.">        if (getWaterTank().getActualVolume() &lt; container.getCapacity()){</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (getWaterTank().getActualVolume() &lt; container.getCapacity()){</span>
 <span class="nc" id="L45">            throw new LackOfWaterInTankException(&quot;You must add more water in the water tank.&quot;);</span>
         }
 
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (!container.isEmpty()){</span>
-<span class="nc" id="L49">            throw new CupNotEmptyException(&quot;The container given is not empty or null.&quot;);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (!container.isEmpty()){</span>
+<span class="fc" id="L49">            throw new CupNotEmptyException(&quot;The container given is not empty or null.&quot;);</span>
         }
 
-<span class="nc bnc" id="L52" title="All 4 branches missed.">        if(coffeeType != this.beanTank.getBeanCoffeeType() &amp;&amp; coffeeType != this.secondaryBeanTank.getBeanCoffeeType()){</span>
-<span class="nc" id="L53">            throw new CoffeeTypeCupDifferentOfCoffeeTypeTankException(&quot;The type of coffee to be made in the cup is different from that in the tank.&quot;);</span>
+<span class="pc bpc" id="L52" title="2 of 4 branches missed.">        if(coffeeType != this.beanTank.getBeanCoffeeType() &amp;&amp; coffeeType != this.secondaryBeanTank.getBeanCoffeeType()){</span>
+<span class="fc" id="L53">            throw new CoffeeTypeCupDifferentOfCoffeeTypeTankException(&quot;The type of coffee to be made in the cup is different from that in the tank.&quot;);</span>
         }
 
 <span class="nc" id="L56">        coffeeMachineFailure();</span>
