@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\MainEspresso.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\WaterPump.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\CoffeeMachine.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\MainCoffee.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\CoffeeGrinder.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\exception\MachineNotPluggedException.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\SteamPipe.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\Tank.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\WaterTank.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\BeanTank.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\EspressoCoffeeMachine.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\exception\CannotMakeCremaWithSimpleCoffeeMachine.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\exception\LackOfWaterInTankException.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\component\ElectricalResistance.java
+C:\Users\User\Desktop\imt\S9 IMT\CoffeMachineV2\cours-maven-2023-V2\coffee-machine\coffee-machine\src\main\java\fr\imt\coffee\machine\exception\CoffeeTypeCupDifferentOfCoffeeTypeTankException.java
