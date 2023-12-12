@@ -141,6 +141,10 @@ public class CoffeeMachineUnitTest {
 
     @Test
     void testCannotMakeCremaWithSimpleCoffeeMachine() {
+        Random randomMock = Mockito.mock(Random.class, Mockito.withSettings().withoutAnnotations());
+        Mockito.when(randomMock.nextGaussian()).thenReturn(0.6);
+        coffeeMachineUnderTest.setRandomGenerator(randomMock);
+        
         Cup cup=new Cup(1);
 
         coffeeMachineUnderTest.plugToElectricalPlug();
